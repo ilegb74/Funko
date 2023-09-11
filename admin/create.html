@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/branding/isotype.svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/adminStyles/create.css">
+    <title>Log In | Funkoshop</title>
+</head>
+
+<body class="grid-fixed">
+    <header>
+        <nav class="navbar container">
+            <picture class="navbar_logo">
+                <a href="/">
+                    <img src="../../img/branding/logo_light_horizontal.svg" alt="Logotipo">
+                </a>
+            </picture>
+            <ul class="navbar_list">
+                <li><a class="navbar_link" href="../../pages/shop.html">SALIR</a></li>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="create" class="container">
+        <h2 class="create_title">CREAR NUEVO ITEM</h2>
+        <form class="create_form" action="/admin/create" method="POST" enctype="application/x-www-form-urlencoded">
+            <div class="form_flex">
+                <div class="form_box-flex">
+                    <label class="form_label" for="collection">Categoria:</label>
+                    <select class="form_select" name="collection" id="collection" required>
+                        <option value="" disabled selected hidden>Seleccionar</option>
+                        <option value="Collectable Figures">Collectable Figures</option>
+                        <option value="Key Ring">Key Ring</option>
+                        <option value="T-shirt">T-shirt</option>
+                    </select>
+                </div>
+                <div class="form_box-flex">
+                    <label class="form_label" for="collection">Licencia:</label>
+                    <select class="form_select" name="collection" id="collection" required>
+                        <option value="" disabled selected hidden>Seleccionar</option>
+                        <option value="starwars">Star Wars</option>
+                        <option value="pokemon">Pokemon</option>
+                        <option value="harrypotter">Harry Potter</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form_box-flex">
+                <label class="form_label" for="name">Nombre del producto:</label>
+                <input class="form_input" type="text" name="name" id="name" placeholder="Funkos" required>
+            </div>
+            <div>
+                <textarea name="description" id="description" cols="30" rows="10" placeholder="Nombre del producto" required></textarea>
+            </div>
+            <div class="form_flex">
+                <div class="form_box-flex">
+                    <label class="form_label" for="sku">SKU:</label>
+                    <input class="form_input" type="text" name="sku" id="sku" placeholder="SSK111AB001" required>
+                </div>
+                <div class="form_box-flex">
+                    <label class="form_label" for="price">Precio:</label>
+                    <div class="form_input-wrapper"><span>$</span><input class="form_input" type="text" name="prcio" id="precio" data-type="currency" placeholder="0.000,00"></div>
+                </div>
+                <div class="form_box-flex">
+                    <label class="form_label" for="stock">Stock:</label>
+                    <div class="form_input-wrapper"><input class="form_input" type="text" name="stock" id="stock" placeholder="0" required><span>unidades</span></div>
+                </div>
+            </div>
+            <div class="form_flex">
+                <div class="form_box-flex">
+                    <label class="form_label" for="descuento">Descuento:</label>
+                    <div class="form_input-wrapper"><input class="form_input" type="text" name="descuento" id="descuento" placeholder="0" required><span>%</span></div>
+                </div>
+                <div class="form_box-flex">
+                    <label class="form_label" for="cuotas">Cuotas:</label>
+                    <select class="form_select" name="cuotas" id="cuotas">
+                        <option value="0">1 Pago</option>
+                        <option value="3">3 Cuotas sin interés</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form_box-flex">
+                <label class="form_label" for="images">Imagenes:</label>
+                <input type="file" name="images" id="img" multiple>
+            </div>
+            <div class="form_flex">
+                <input class="form_btn btn btn-primary btn-large" type="submit" value="Agregar Producto">
+                <input class="form_btn btn btn-primary btn-large" type="reset" value="Limpiar">
+            </div>
+        </form>
+    </main>
+    
+
+    <footer>
+        <nav class="navbar container">
+            <ul>
+                <li class="nav-item">
+                    <a class="navbar_link" href="../../pages/">SHOP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar_link" href="../../pages/">REGISTRARSE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar_link" href="../../pages/">INGRESAR</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar_link" href="../../pages/">CONTACTO</a>
+                </li>
+            </ul>
+            <picture>
+                <img src="../../img/branding/isotype.svg" alt="Isotipo de la marca Funkoshop">
+            </picture>
+        </nav>
+        <p class="footer_copyright">All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer>
+</body>
+
+</html>
